@@ -1,16 +1,16 @@
 import React from 'react';
 
 
-class LoginComponent extends React.Component {
+class RegisterComponent extends React.Component {
   render() {
     return <>
     <div className='min-h-full flex items-center justify-center bg-slate-50'>
       <div className='container mx-auto max-w-md w-full drop-shadow-md rounded-md p-4 bg-white'>
-        <h2 className='mt-6 text-center text-3xl font-extrabold text-gray-900'>Login</h2>
+        <h2 className='mt-6 text-center text-3xl font-extrabold text-gray-900'>Create Account</h2>
         <form className="mt-8 space-y-6">
             <input type="hidden" name="remember" defaultValue="true" />
             <div className="rounded-md shadow-sm -space-y-px">
-              <div className='mb-5'>
+              <div>
                 <label htmlFor="email-address" className="sr-only">
                   Email address
                 </label>
@@ -24,7 +24,7 @@ class LoginComponent extends React.Component {
                   placeholder="Email address"
                 />
               </div>
-              <div>
+              <div className='py-4'>
                 <label htmlFor="password" className="sr-only">
                   Password
                 </label>
@@ -38,15 +38,21 @@ class LoginComponent extends React.Component {
                   placeholder="Password"
                 />
               </div>
-            </div>
-            <div className="flex items-center justify-between">
-              <div className="text-sm">
-                <a href="#" className="font-medium text-indigo-600 hover:text-indigo-500">
-                  Forgot your password?
-                </a>
+              <div>
+                <label htmlFor="confirm-password" className="sr-only">
+                  Confirm Password
+                </label>
+                <input
+                  id="confirm-password"
+                  name="confirm-password"
+                  type="confirm-password"
+                  autoComplete="current-password"
+                  required
+                  className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
+                  placeholder="Confirm Password"
+                />
               </div>
             </div>
-
             <div>
               <button
                 type="submit"
@@ -54,7 +60,7 @@ class LoginComponent extends React.Component {
               >
                 <span className="absolute left-0 inset-y-0 flex items-center pl-3">
                 </span>
-                Sign in
+                Sign Up
               </button>
             </div>
           </form>
@@ -64,4 +70,4 @@ class LoginComponent extends React.Component {
   }
 }
 
-export default LoginComponent;
+export default RegisterComponent;

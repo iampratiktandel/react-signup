@@ -1,10 +1,14 @@
 import React from 'react';
 import LoginComponent from './LoginComponent';
+import RegisterComponent from './RegisterComponent';
 
 
 class MasterComponent extends React.Component {
   render() {
-    return <LoginComponent></LoginComponent>;
+    return <section className='h-full'>
+      <RegisterComponent/>
+      {/* <LoginComponent/>; */}
+    </section>
   }
 }
 
